@@ -1,0 +1,41 @@
+// Pobierz statystyki z bazy danych
+QSqlQuery statsQuery;
+QString statsSQL = R"(
+    SELECT 
+        (SELECT count(*) FROM patients) AS patientCount,
+        (SELECT count(*) FROM studies) AS studyCount,
+        (SELECT count(*) FROM series) AS seriesCount,
+        (SELECT count(*) FROM images) AS imageCount,
+        (SELECT coalesce(sum(octet_length(image_data)), 0) FROM images) AS totalSizeBytes
+)";
+if (!statsQuery.exec(statsSQL)) {
+    QMessageBox::critical(this, "Błąd SQL", "Nie udało się pobrać statystyk z bazy danych:\n" + statsQuery.lastError().text());
+    return;
+}
+
+if (statsQuery.next()) {
+    QDomElement statisticsElement = doc.createElement("statistics");
+
+    QDomElement patientCount = doc.createElement("patientCount");
+    patientCount.appendChild(doc.createTextNode(statsQuery.value("patientCount").toString()));
+    statisticsElement.appendChild(patientCount);
+
+    QDomElement studyCount = doc.createElement("studyCount");
+    studyCount.appendChild(doc.createTextNode(statsQuery.value("studyCount").toString()));
+    statisticsElement.appendChild(studyCount);
+
+    QDomElement seriesCount = doc.createElement("seriesCount");
+    seriesCount.appendChild(doc.createTextNode(statsQuery.value("seriesCount").toString()));
+    statisticsElement.appendChild(seriesCount);
+
+    QDomElement imageCount = doc.createElement("imageCount");
+    imageCount.appendChild(doc.createTextNode(statsQuery.value("imageCount").toString()));
+    statisticsElement.appendChild(imageCount);
+
+    QDomElement totalSizeBytes = doc.createElement("totalSizeBytes");
+    totalSizeBytes.appendChild(doc.createTextNode(statsQuery.value("totalSizeBytes").toString()));
+    statisticsElement.appendChild(totalSizeBytes);
+
+    // Dodaj do głównego węzła
+    root.appendChild(statisticsElement);
+}

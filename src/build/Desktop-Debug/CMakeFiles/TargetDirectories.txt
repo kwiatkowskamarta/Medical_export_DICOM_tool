@@ -1,0 +1,9 @@
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/sim.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/install.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/sim_autogen_timestamp_deps.dir
+/home/Ika/sim/build/Desktop-Debug/CMakeFiles/sim_autogen.dir

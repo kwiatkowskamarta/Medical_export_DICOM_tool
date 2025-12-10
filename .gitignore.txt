@@ -1,0 +1,22 @@
+# Pliki kompilacji
+build/
+cmake-build-*/
+*.o
+*.obj
+Makefile
+CMakeCache.txt
+*.cmake
+
+# Pliki tymczasowe Qt
+*.user
+*.user.*
+*.moc
+*.ui_*.h
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+
+# Wyniki działania programu (nie chcemy ich w repo)
+exports/*.xml
+!exports/.gitkeep

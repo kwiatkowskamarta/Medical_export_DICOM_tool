@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <xs:element name="export">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="statistics" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="patientcount" type="xs:integer"/>
+              <xs:element name="studycount" type="xs:integer"/>
+              <xs:element name="seriescount" type="xs:integer"/>
+              <xs:element name="imagecount" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="patients">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="patient" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0"/>
+                    <xs:element name="age" type="xs:integer"/>
+                    <xs:element name="sex" type="xs:string"/>
+                    <xs:element name="study" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="date" type="xs:date"/>
+                          <xs:element name="time" type="xs:time" minOccurs="0"/>
+                          <xs:element name="description" type="xs:string" minOccurs="0"/>
+                          <xs:element name="referring_physician" type="xs:string" minOccurs="0"/>
+                          <xs:element name="accession_number" type="xs:string" minOccurs="0"/>
+                          <xs:element name="institution_name" type="xs:string" minOccurs="0"/>
+                          <xs:element name="institution_address" type="xs:string" minOccurs="0"/>
+                          <xs:element name="series" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="modality" type="xs:string"/>
+                                <xs:element name="description" type="xs:string" minOccurs="0"/>
+                                <xs:element name="series_number" type="xs:integer" minOccurs="0"/>
+                                <xs:element name="image" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="rows" type="xs:integer"/>
+                                      <xs:element name="columns" type="xs:integer"/>
+                                      <xs:element name="bits_allocated" type="xs:integer"/>
+                                      <xs:element name="instance_number" type="xs:integer" minOccurs="0"/>
+                                      <xs:element name="image_type" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="series_uid" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="study_uid" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                  <xs:attribute name="patient_id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

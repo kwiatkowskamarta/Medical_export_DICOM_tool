@@ -1,0 +1,56 @@
+dropdb -U Ika baza_danych
+createdb -U Ika baza_danych
+--------------------------------------------
+g++ dicom_to_DB.cpp -o dicom_app -ldicomhero6 -lodbc
+psql -U Ika -d baza_danych -f database.sql
+-------------------------------
+nano ~/.odbc.ini
+
+wklej:
+[my_postgres]
+Description=PostgreSQL local database
+Driver=PostgreSQL
+Database=baza_danych
+Servername=localhost
+Port=5432
+Username=Ika
+Password=1122
+
+sudo nano /etc/odbcinst.ini
+
+wklej:
+[PostgreSQL]
+Description=PostgreSQL ODBC driver (Unicode version)
+Driver=psqlodbcw.so
+Setup=libodbcpsqlS.so
+Debug=0
+CommLog=1
+UsageCount=1
+
+sudo nano /etc/odbc.ini
+wklej:
+
+[my_postgres]
+Description=PostgreSQL local database
+Driver=PostgreSQL
+Database=baza_danych
+Servername=localhost
+Port=5432
+Username=Ika
+Password=1122
+
+odbcinst -q -d 
+
+--------------------------
+./dicom_app
+
+
+cd /home/Ika/sim
+mkdir build   ///chyba ze już jest folder build
+cd build
+cmake ..
+make
+./sim  # jeśli tak się nazywa plik wykonywalny
+
+./sim NAZWA_BAZY USER PORT HASLO
+

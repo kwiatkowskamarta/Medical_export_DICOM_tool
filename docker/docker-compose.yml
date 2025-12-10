@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:15
+    container_name: sim-db
+    environment:
+      POSTGRES_USER: Weronika
+      POSTGRES_PASSWORD: haslomaslo123
+      POSTGRES_DB: Weronika
+    ports:
+      - "5433:5432"
+    volumes:
+      - sim_pgdata:/var/lib/postgresql/data
+      - ./docker/sim_db.sql:/docker-entrypoint-initdb.d/sim_db.sql
+
+volumes:
+  sim_pgdata:
+

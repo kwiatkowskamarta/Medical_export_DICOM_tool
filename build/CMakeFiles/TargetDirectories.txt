@@ -1,0 +1,12 @@
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/sim_app.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/xml_validator.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/list_install_components.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/install.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/install/local.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/install/strip.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/sim_app_autogen_timestamp_deps.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/sim_app_autogen.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/xml_validator_autogen_timestamp_deps.dir
+/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/build/CMakeFiles/xml_validator_autogen.dir

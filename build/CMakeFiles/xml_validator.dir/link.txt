@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/xml_validator.dir/xml_validator_autogen/mocs_compilation.cpp.o CMakeFiles/xml_validator.dir/mnt/c/Users/kwiat/OneDrive/Pulpit/politechnika/magisterskie/sem1/sim/projekt/tools/xml_validation.cpp.o -o xml_validator  /usr/lib/x86_64-linux-gnu/libxml2.so 
